@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// HEADER
+#header {
+  max-height: 100px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// HEADER
+
+.img-banner {
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+  border-bottom: 2px solid black;
+}
