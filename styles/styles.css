@@ -5,11 +5,22 @@
   font-family: "Cabin", sans-serif;
 }
 
+@keyframes palpitar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .container-global {
   display: grid;
   grid-template-areas: "header header " "main main " "footer footer ";
-  grid-template-rows: 150px 1fr 70px;
-  height: 100vh;
+  grid-template-rows: 150px 1fr 150px;
+  min-height: 100vh;
 }
 .container-global .header {
   grid-area: header;
@@ -19,11 +30,12 @@
   background-color: #080a0b;
   grid-area: main;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 .container-global .footer {
   grid-area: footer;
   background-color: #080a0b;
+  border-top: 2px solid #212529;
 }
 
 .header img {
@@ -32,7 +44,6 @@
 }
 .header .navbar-mobile {
   display: flex;
-  margin-left: 14px;
   height: 80px;
   width: 50%;
   position: relative;
@@ -45,11 +56,26 @@
   text-shadow: 0px 0px 5px rgb(238, 0, 0);
 }
 
-.description-home {
+.description-home, .box-recommend {
   position: relative;
   z-index: 2;
   padding: 20px;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.description-home h1, .box-recommend h1 {
+  font-size: 35px;
+  text-shadow: 3px 2px 0px rgba(139, 139, 139, 0.73);
+  padding: 5px;
+  border-radius: 10px;
+}
+.description-home p, .box-recommend p {
+  font-size: 18px;
+  display: flex;
+  margin-top: 12px;
+  text-align: center;
 }
 
 .background-image {
@@ -60,7 +86,6 @@
   background-image: url("assets/aeag2xr9i2sc1.jpeg");
   background-size: cover;
   background-position: center;
-  height: 100%;
   width: 100%;
   position: relative;
   filter: blur(3px) brightness(40%);
@@ -68,6 +93,91 @@
   -moz-filter: blur(3px) brightness(40%);
   object-fit: cover;
   clip-path: inset(1px);
+}
+
+.logos-div {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+}
+.logos-div .logos {
+  height: 150px;
+  width: 50%;
+}
+
+.box-recommend {
+  box-shadow: 0px -43px 100px 0px #080a0b;
+  margin-top: 66px;
+}
+.box-recommend h3 {
+  font-size: 18px;
+  font-style: italic;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-self: center;
+  background-color: rgba(255, 40, 46, 0.5);
+  padding: 10px;
+  border-radius: 30px;
+}
+.box-recommend span {
+  display: flex;
+  text-align: start;
+  margin-top: 16px;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-style: oblique;
+  color: #ff282e;
+}
+.box-recommend ul {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  gap: 12px;
+  list-style: none;
+  text-decoration: underline;
+}
+.box-recommend button {
+  width: 200px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-top: 12px;
+  animation: palpitar 2.5s infinite;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  margin-top: 42px;
+}
+
+.icons-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 5px;
+  padding-top: 15px;
+}
+.icons-section div {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 8px;
+}
+.icons-section .icons-footer {
+  display: flex;
+  font-size: 15px;
+}
+.icons-section .icons-footer span {
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

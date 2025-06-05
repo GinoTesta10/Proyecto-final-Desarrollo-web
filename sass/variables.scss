@@ -1,1 +1,13 @@
 $bg-primary: #080a0b;
+$bg-secondary: #ff282e;
+@keyframes palpitar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
