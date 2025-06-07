@@ -205,6 +205,9 @@
 // GLOBAL PAGES
 // HEADER
 .header {
+  .nav-desktop {
+    display: none;
+  }
   img {
     height: 150px;
     width: 50%;
@@ -359,4 +362,55 @@
       margin-left: 5px;
     }
   }
+}
+
+// RESPONSIVE TABLET
+@media (min-width: 720px) {
+  // HOME
+  // HEADER
+  .logo-enter {
+    width: 20% !important;
+  }
+  .navbar-mobile {
+    display: none !important;
+  }
+  .nav-desktop {
+    display: flex !important;
+    justify-content: flex-end;
+    position: relative;
+    top: 95px;
+    background-color: transparentize($color: gray, $amount: 0.9);
+    margin-left: 149px;
+
+    li {
+      padding-left: 90px;
+    }
+    a {
+      display: flex;
+      color: red !important;
+      text-shadow: 0px 0px 5px rgba(238, 0, 0, 1);
+    }
+  }
+  // HEADER
+  //  MAIN
+  .logos-div {
+    .logos {
+      height: 316px;
+    }
+  }
+  .box-recommend {
+    background: none;
+    background-color: $bg-primary;
+    span {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 28px;
+    }
+    ul {
+      justify-content: center;
+      width: auto;
+    }
+  }
+}
+@media (min-width: ) {
 }
